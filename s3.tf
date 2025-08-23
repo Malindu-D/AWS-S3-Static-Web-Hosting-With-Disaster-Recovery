@@ -1,6 +1,6 @@
 #S3 Main Bucket Configurations
 resource "aws_s3_bucket" "s3-web-proj-bucket"{
-    bucket = "s3-web-proj-bucket"
+    bucket = var.main-bucket
     
 }
 
@@ -167,7 +167,7 @@ resource "aws_s3_bucket_replication_configuration" "replication" {
 
 resource "aws_s3_bucket" "s3-web-proj-disaster-bucket"{
     provider = aws.disaster
-    bucket = "s3-web-proj-disaster-bucket"
+    bucket = var.disaster-bucket
     
 }
 

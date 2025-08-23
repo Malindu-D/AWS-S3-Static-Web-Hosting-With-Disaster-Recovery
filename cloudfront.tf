@@ -55,7 +55,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 #     prefix          = "myprefix"
 #   }
 
-  aliases = ["malindud.works"]
+  aliases = [var.domain_name,var.alt_domain_name]
 
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
